@@ -1,3 +1,3 @@
 #!/bin/bash
-cd swapdesktop
-zip ../swapdesktop.kwinscript contents/*/* metadata.desktop
+cd virtual_desktop_tools
+zip ../virtual_desktop_tools.kwinscript contents/*/* metadata.desktop
