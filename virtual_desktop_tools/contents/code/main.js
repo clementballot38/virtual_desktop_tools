@@ -77,6 +77,12 @@ function addDesktop(addafter)
 	/* Add new desktop */
 	workspace.desktops++;
 
+	workspace.clientList().forEach((w, i) => {
+		if(   w.desktop >  workspace.currentDesktop && addafter
+		   || w.desktop >= workspace.currentDesktop && !addafter)
+			w.desktop++;
+	});
+
 	/* switch to new desktop if added after current one */
 	if(addafter)
 		workspace.currentDesktop++;
